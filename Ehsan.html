@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260707-05-f6eb95b"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ehsan Moazzami — Computer Engineer, AI Developer and Blockchain Researcher building intelligent systems that shape the future.">
+  <title>Ehsan Moazzami — Building Tomorrow Before It Exists</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;display=swap" rel="stylesheet">
+  <style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background:#000; }
+  ::selection { background:#fff; color:#000; }
+
+  /* Reveal animation */
+  .reveal { opacity:0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity:1; transform: none; }
+
+  /* Glass */
+  .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border:1px solid rgba(255,255,255,0.08); }
+  .glass:hover { border-color: rgba(255,255,255,0.22); box-shadow: 0 0 40px rgba(255,255,255,0.06); }
+
+  .nav-blur { background: rgba(0,0,0,0.55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom:1px solid rgba(255,255,255,0.06); }
+
+  .glow-btn { position:relative; transition: all .35s cubic-bezier(.16,1,.3,1); }
+  .glow-btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,255,255,0.25); }
+
+  .skill-card, .cert-card, .proj-card { transition: transform .4s cubic-bezier(.16,1,.3,1), border-color .4s, box-shadow .4s; }
+  .skill-card:hover, .cert-card:hover { transform: translateY(-6px); box-shadow: 0 0 50px rgba(255,255,255,0.08); }
+  .proj-card:hover { transform: translateY(-8px); box-shadow: 0 0 60px rgba(255,255,255,0.12); }
+  .proj-card:hover .proj-img { transform: scale(1.06); }
+  .proj-img { transition: transform .8s cubic-bezier(.16,1,.3,1); }
+
+  /* Loader */
+  #loader { position:fixed; inset:0; z-index:100; background:#000; display:flex; align-items:center; justify-content:center; transition: opacity .8s ease, visibility .8s; }
+  #loader.hide { opacity:0; visibility:hidden; }
+  .loader-mark { width:48px; height:48px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.15); border-top-color:#fff; animation: spin 1s linear infinite; box-shadow:0 0 30px rgba(255,255,255,0.15); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .hero-canvas { position:absolute; inset:0; width:100%; height:100%; }
+  .hero-fade { background: radial-gradient(ellipse at 50% 35%, rgba(255,255,255,0.06), transparent 60%); }
+
+  /* Project overlay */
+  #proj-overlay { position:fixed; inset:0; z-index:90; background: rgba(0,0,0,0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); overflow-y:auto; opacity:0; visibility:hidden; transition: opacity .4s ease, visibility .4s; }
+  #proj-overlay.open { opacity:1; visibility:visible; }
+  .proj-detail { display:none; }
+  .proj-detail.active { display:block; }
+
+  .timeline-line { background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.02)); }
+  .stat-num { font-family:'Fraunces', serif; }
+
+  .fade-word { animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both; }
+  @keyframes fadeUp { from { opacity:0; transform: translateY(24px); } to { opacity:1; transform:none; } }
+
+  #mobile-menu { transition: opacity .3s ease, visibility .3s; }
+</style>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+ </head>
+ <body data-template-id="__page-root" class="text-white antialiased w-full overflow-x-hidden">
+  <div id="loader">
+   <div class="loader-mark" aria-hidden="true"></div>
+  </div><!-- NAV -->
+  <header class="fixed top-0 left-0 w-full z-50 nav-blur">
+   <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"><a href="#hero" data-template-id="nav-logo" class="canva-text font-bold tracking-tight"></a>
+    <div class="hidden md:flex items-center gap-8"><a href="#about" data-template-id="nav-about" class="canva-link text-sm opacity-70 hover:opacity-100 transition"></a> <a href="#skills" data-template-id="nav-skills" class="canva-link text-sm opacity-70 hover:opacity-100 transition"></a> <a href="#projects" data-template-id="nav-projects" class="canva-link text-sm opacity-70 hover:opacity-100 transition"></a> <a href="#blog" data-template-id="nav-blog" class="canva-link text-sm opacity-70 hover:opacity-100 transition"></a> <a href="#contact" data-template-id="nav-cta" class="canva-button glow-btn text-sm px-5 py-2 rounded-full"></a>
+    </div><button id="menu-toggle" class="md:hidden text-white" aria-label="Open menu"><i data-lucide="menu"></i></button>
+   </nav>
+   <div id="mobile-menu" class="md:hidden invisible opacity-0 absolute top-16 left-0 w-full nav-blur px-6 py-6 flex flex-col gap-5"><a href="#about" data-template-id="mnav-about" class="canva-link text-sm opacity-80"></a> <a href="#skills" data-template-id="mnav-skills" class="canva-link text-sm opacity-80"></a> <a href="#projects" data-template-id="mnav-projects" class="canva-link text-sm opacity-80"></a> <a href="#blog" data-template-id="mnav-blog" class="canva-link text-sm opacity-80"></a> <a href="#contact" data-template-id="mnav-contact" class="canva-link text-sm opacity-80"></a>
+   </div>
+  </header>
+  <main class="w-full"><!-- HERO -->
+   <section id="hero" class="relative w-full flex items-center justify-center overflow-hidden" style="min-height: calc(100 * min(var(--vh,1vh),1vh));">
+    <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-fade absolute inset-0" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 pb-16">
+     <div class="fade-word" style="animation-delay:.1s"><span data-template-id="hero-eyebrow" class="canva-tag inline-block glass rounded-full px-4 py-1.5 text-xs tracking-widest uppercase mb-8"></span>
+     </div>
+     <h1 data-template-id="hero-title" class="canva-text fade-word font-bold leading-[1.05] tracking-tight" style="animation-delay:.2s; font-size: clamp(2.4rem, 7vw, 5.2rem);"></h1>
+     <p data-template-id="hero-subtitle" class="canva-text fade-word mt-8 max-w-2xl mx-auto leading-relaxed opacity-70" style="animation-delay:.35s;"></p>
+     <div class="fade-word flex flex-col sm:flex-row gap-4 justify-center mt-10" style="animation-delay:.5s"><a href="#projects" data-template-id="hero-primary" class="canva-button glow-btn px-8 py-3.5 rounded-full font-medium"></a> <a href="#contact" data-template-id="hero-secondary" class="canva-button px-8 py-3.5 rounded-full font-medium border border-white/15 hover:border-white/40 transition"></a>
+     </div>
+    </div>
+   </section><!-- STATS -->
+   <section class="w-full max-w-6xl mx-auto px-6 -mt-8 relative z-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+     <div data-template-id="stat-1" class="canva-card glass rounded-2xl p-6 text-center">
+      <div data-template-id="stat-1-num" class="canva-text stat-num font-bold" style="font-size:2.4rem;"></div>
+      <div data-template-id="stat-1-label" class="canva-text text-xs uppercase tracking-widest opacity-50 mt-2"></div>
+     </div>
+     <div data-template-id="stat-2" class="canva-card glass rounded-2xl p-6 text-center">
+      <div data-template-id="stat-2-num" class="canva-text stat-num font-bold" style="font-size:2.4rem;"></div>
+      <div data-template-id="stat-2-label" class="canva-text text-xs uppercase tracking-widest opacity-50 mt-2"></div>
+     </div>
+     <div data-template-id="stat-3" class="canva-card glass rounded-2xl p-6 text-center">
+      <div data-template-id="stat-3-num" class="canva-text stat-num font-bold" style="font-size:2.4rem;"></div>
+      <div data-template-id="stat-3-label" class="canva-text text-xs uppercase tracking-widest opacity-50 mt-2"></div>
+     </div>
+     <div data-template-id="stat-4" class="canva-card glass rounded-2xl p-6 text-center">
+      <div data-template-id="stat-4-num" class="canva-text stat-num font-bold" style="font-size:2.4rem;"></div>
+      <div data-template-id="stat-4-label" class="canva-text text-xs uppercase tracking-widest opacity-50 mt-2"></div>
+     </div>
+    </div>
+   </section><!-- PHILOSOPHY -->
+   <section class="w-full max-w-3xl mx-auto px-6 py-32 text-center reveal">
+    <blockquote data-template-id="philosophy-quote" class="canva-text font-normal leading-[1.3] tracking-tight" style="font-family:'Fraunces',serif; font-size: clamp(1.6rem, 3.5vw, 2.6rem);"></blockquote>
+    <p data-template-id="philosophy-body" class="canva-text mt-10 opacity-60 leading-relaxed max-w-xl mx-auto"></p>
+   </section><!-- ABOUT -->
+   <section id="about" class="w-full max-w-4xl mx-auto px-6 py-24 reveal"><span data-template-id="about-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="about-title" class="canva-text font-bold mt-4 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <p data-template-id="about-body" class="canva-text mt-8 text-lg leading-relaxed opacity-75"></p>
+    <div class="flex flex-wrap gap-3 mt-8"><span data-template-id="about-lang-en" class="canva-tag glass rounded-full px-4 py-2 text-sm"></span> <span data-template-id="about-lang-de" class="canva-tag glass rounded-full px-4 py-2 text-sm"></span>
+    </div>
+   </section><!-- SKILLS -->
+   <section id="skills" class="w-full max-w-6xl mx-auto px-6 py-24 reveal"><span data-template-id="skills-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="skills-title" class="canva-text font-bold mt-4 mb-12 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+     <div data-template-id="skill-1" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-2" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-3" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-4" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-5" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-6" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-7" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-8" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-9" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-10" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-11" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-12" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-13" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-14" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-15" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+     <div data-template-id="skill-16" class="canva-card skill-card glass rounded-xl px-5 py-6 text-center font-medium"></div>
+    </div>
+   </section><!-- EXPERIENCE -->
+   <section id="experience" class="w-full max-w-4xl mx-auto px-6 py-24 reveal"><span data-template-id="exp-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="exp-title" class="canva-text font-bold mt-4 mb-14 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <div class="relative pl-8">
+     <div class="timeline-line absolute left-0 top-2 bottom-2 w-px" aria-hidden="true"></div>
+     <div class="space-y-12">
+      <div class="relative">
+       <div class="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-white" style="box-shadow:0 0 14px rgba(255,255,255,0.6)" aria-hidden="true"></div>
+       <h3 data-template-id="exp-1-company" class="canva-text font-semibold" style="font-size:1.25rem;"></h3>
+       <p data-template-id="exp-1-desc" class="canva-text opacity-60 mt-2 leading-relaxed"></p>
+      </div>
+      <div class="relative">
+       <div class="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-white" style="box-shadow:0 0 14px rgba(255,255,255,0.6)" aria-hidden="true"></div>
+       <h3 data-template-id="exp-2-company" class="canva-text font-semibold" style="font-size:1.25rem;"></h3>
+       <p data-template-id="exp-2-desc" class="canva-text opacity-60 mt-2 leading-relaxed"></p>
+      </div>
+      <div class="relative">
+       <div class="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-white" style="box-shadow:0 0 14px rgba(255,255,255,0.6)" aria-hidden="true"></div>
+       <h3 data-template-id="exp-3-company" class="canva-text font-semibold" style="font-size:1.25rem;"></h3>
+       <p data-template-id="exp-3-desc" class="canva-text opacity-60 mt-2 leading-relaxed"></p>
+      </div>
+      <div class="relative">
+       <div class="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-white" style="box-shadow:0 0 14px rgba(255,255,255,0.6)" aria-hidden="true"></div>
+       <h3 data-template-id="exp-4-company" class="canva-text font-semibold" style="font-size:1.25rem;"></h3>
+       <p data-template-id="exp-4-desc" class="canva-text opacity-60 mt-2 leading-relaxed"></p>
+      </div>
+      <div class="relative">
+       <div class="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-white" style="box-shadow:0 0 14px rgba(255,255,255,0.6)" aria-hidden="true"></div>
+       <h3 data-template-id="exp-5-company" class="canva-text font-semibold" style="font-size:1.25rem;"></h3>
+       <p data-template-id="exp-5-desc" class="canva-text opacity-60 mt-2 leading-relaxed"></p>
+      </div>
+     </div>
+    </div>
+   </section><!-- CERTIFICATIONS -->
+   <section class="w-full max-w-6xl mx-auto px-6 py-24 reveal"><span data-template-id="cert-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="cert-title" class="canva-text font-bold mt-4 mb-12 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+     <div data-template-id="cert-1" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-1-name" class="canva-text font-medium"></span>
+     </div>
+     <div data-template-id="cert-2" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-2-name" class="canva-text font-medium"></span>
+     </div>
+     <div data-template-id="cert-3" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-3-name" class="canva-text font-medium"></span>
+     </div>
+     <div data-template-id="cert-4" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-4-name" class="canva-text font-medium"></span>
+     </div>
+     <div data-template-id="cert-5" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-5-name" class="canva-text font-medium"></span>
+     </div>
+     <div data-template-id="cert-6" class="canva-card cert-card glass rounded-2xl p-6 flex items-center gap-3">
+      <i data-lucide="badge-check" class="opacity-60 flex-shrink-0"></i><span data-template-id="cert-6-name" class="canva-text font-medium"></span>
+     </div>
+    </div>
+   </section><!-- PROJECTS -->
+   <section id="projects" class="w-full max-w-6xl mx-auto px-6 py-24 reveal"><span data-template-id="proj-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="proj-title" class="canva-text font-bold mt-4 mb-12 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <div class="grid md:grid-cols-2 gap-6"><button type="button" class="proj-card glass rounded-3xl overflow-hidden text-left group" data-open="1">
+      <div class="overflow-hidden">
+       <img data-template-id="proj-1-img" class="canva-image proj-img w-full h-56 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="proj-1-name" class="canva-text font-semibold" style="font-size:1.4rem;"></h3>
+       <p data-template-id="proj-1-tag" class="canva-text opacity-55 mt-2 text-sm"></p><span data-template-id="proj-1-cta" class="canva-link inline-flex items-center gap-1 mt-4 text-sm opacity-80 group-hover:opacity-100"></span>
+      </div></button> <button type="button" class="proj-card glass rounded-3xl overflow-hidden text-left group" data-open="2">
+      <div class="overflow-hidden">
+       <img data-template-id="proj-2-img" class="canva-image proj-img w-full h-56 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="proj-2-name" class="canva-text font-semibold" style="font-size:1.4rem;"></h3>
+       <p data-template-id="proj-2-tag" class="canva-text opacity-55 mt-2 text-sm"></p><span data-template-id="proj-2-cta" class="canva-link inline-flex items-center gap-1 mt-4 text-sm opacity-80 group-hover:opacity-100"></span>
+      </div></button> <button type="button" class="proj-card glass rounded-3xl overflow-hidden text-left group" data-open="3">
+      <div class="overflow-hidden">
+       <img data-template-id="proj-3-img" class="canva-image proj-img w-full h-56 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="proj-3-name" class="canva-text font-semibold" style="font-size:1.4rem;"></h3>
+       <p data-template-id="proj-3-tag" class="canva-text opacity-55 mt-2 text-sm"></p><span data-template-id="proj-3-cta" class="canva-link inline-flex items-center gap-1 mt-4 text-sm opacity-80 group-hover:opacity-100"></span>
+      </div></button> <button type="button" class="proj-card glass rounded-3xl overflow-hidden text-left group" data-open="4">
+      <div class="overflow-hidden">
+       <img data-template-id="proj-4-img" class="canva-image proj-img w-full h-56 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="proj-4-name" class="canva-text font-semibold" style="font-size:1.4rem;"></h3>
+       <p data-template-id="proj-4-tag" class="canva-text opacity-55 mt-2 text-sm"></p><span data-template-id="proj-4-cta" class="canva-link inline-flex items-center gap-1 mt-4 text-sm opacity-80 group-hover:opacity-100"></span>
+      </div></button> <button type="button" class="proj-card glass rounded-3xl overflow-hidden text-left group md:col-span-2" data-open="5">
+      <div class="overflow-hidden">
+       <img data-template-id="proj-5-img" class="canva-image proj-img w-full h-56 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+       <h3 data-template-id="proj-5-name" class="canva-text font-semibold" style="font-size:1.4rem;"></h3>
+       <p data-template-id="proj-5-tag" class="canva-text opacity-55 mt-2 text-sm"></p><span data-template-id="proj-5-cta" class="canva-link inline-flex items-center gap-1 mt-4 text-sm opacity-80 group-hover:opacity-100"></span>
+      </div></button>
+    </div>
+   </section><!-- BLOG -->
+   <section id="blog" class="w-full max-w-6xl mx-auto px-6 py-24 reveal"><span data-template-id="blog-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="blog-title" class="canva-text font-bold mt-4 mb-4 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <p data-template-id="blog-sub" class="canva-text opacity-55 mb-12"></p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+     <div data-template-id="blog-1" class="canva-card glass rounded-2xl p-6">
+      <span data-template-id="blog-1-name" class="canva-text font-medium"></span>
+      <div data-template-id="blog-1-soon" class="canva-tag text-xs uppercase tracking-widest opacity-40 mt-3"></div>
+     </div>
+     <div data-template-id="blog-2" class="canva-card glass rounded-2xl p-6">
+      <span data-template-id="blog-2-name" class="canva-text font-medium"></span>
+      <div data-template-id="blog-2-soon" class="canva-tag text-xs uppercase tracking-widest opacity-40 mt-3"></div>
+     </div>
+     <div data-template-id="blog-3" class="canva-card glass rounded-2xl p-6">
+      <span data-template-id="blog-3-name" class="canva-text font-medium"></span>
+      <div data-template-id="blog-3-soon" class="canva-tag text-xs uppercase tracking-widest opacity-40 mt-3"></div>
+     </div>
+     <div data-template-id="blog-4" class="canva-card glass rounded-2xl p-6">
+      <span data-template-id="blog-4-name" class="canva-text font-medium"></span>
+      <div data-template-id="blog-4-soon" class="canva-tag text-xs uppercase tracking-widest opacity-40 mt-3"></div>
+     </div>
+    </div>
+   </section><!-- RESUME -->
+   <section class="w-full max-w-4xl mx-auto px-6 py-24 text-center reveal">
+    <h2 data-template-id="resume-title" class="canva-text font-bold tracking-tight" style="font-size: clamp(1.8rem,4vw,2.6rem);"></h2>
+    <p data-template-id="resume-sub" class="canva-text opacity-55 mt-4"></p><button type="button" disabled class="mt-8 inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/10 opacity-40 cursor-not-allowed"> <i data-lucide="download"></i><span data-template-id="resume-btn" class="canva-text"></span> </button>
+   </section><!-- CONTACT -->
+   <section id="contact" class="w-full max-w-4xl mx-auto px-6 py-24 reveal"><span data-template-id="contact-eyebrow" class="canva-tag text-xs uppercase tracking-widest opacity-40"></span>
+    <h2 data-template-id="contact-title" class="canva-text font-bold mt-4 mb-4 tracking-tight" style="font-size: clamp(2rem,5vw,3.2rem);"></h2>
+    <p data-template-id="contact-sub" class="canva-text opacity-55 mb-12"></p>
+    <div class="grid md:grid-cols-2 gap-10">
+     <div class="flex flex-col gap-3"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="contact-email" class="canva-link glass rounded-xl px-5 py-4 flex items-center gap-3 hover:border-white/30"><i data-lucide="mail" class="opacity-60"></i><span></span></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="contact-linkedin" class="canva-link glass rounded-xl px-5 py-4 flex items-center gap-3 hover:border-white/30"><i data-lucide="linkedin" class="opacity-60"></i><span></span></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="contact-github" class="canva-link glass rounded-xl px-5 py-4 flex items-center gap-3 hover:border-white/30"><i data-lucide="github" class="opacity-60"></i><span></span></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="contact-instagram" class="canva-link glass rounded-xl px-5 py-4 flex items-center gap-3 hover:border-white/30"><i data-lucide="instagram" class="opacity-60"></i><span></span></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="contact-telegram" class="canva-link glass rounded-xl px-5 py-4 flex items-center gap-3 hover:border-white/30"><i data-lucide="send" class="opacity-60"></i><span></span></a>
+     </div>
+     <form id="contact-form" class="flex flex-col gap-4">
+      <div><label for="cf-name" data-template-id="contact-name-label" class="canva-text text-sm opacity-70"></label> <input id="cf-name" type="text" required class="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40 transition text-white">
+      </div>
+      <div><label for="cf-email" data-template-id="contact-email-label" class="canva-text text-sm opacity-70"></label> <input id="cf-email" type="email" required class="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40 transition text-white">
+      </div>
+      <div><label for="cf-msg" data-template-id="contact-msg-label" class="canva-text text-sm opacity-70"></label> <textarea id="cf-msg" rows="4" required class="w-full mt-2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-white/40 transition text-white resize-none"></textarea>
+      </div><button type="submit" data-template-id="contact-submit" class="canva-button glow-btn px-6 py-3.5 rounded-full font-medium"></button>
+      <p id="cf-success" data-template-id="contact-success" class="canva-text hidden text-sm" aria-live="polite"></p>
+     </form>
+    </div>
+   </section>
+  </main><!-- FOOTER -->
+  <footer class="w-full border-t border-white/8 py-12 text-center">
+   <p data-template-id="footer-name" class="canva-text font-semibold tracking-tight"></p>
+   <p data-template-id="footer-copy" class="canva-text opacity-45 text-sm mt-3"></p>
+   <p data-template-id="footer-tagline" class="canva-text opacity-45 text-sm mt-1"></p>
+  </footer><!-- PROJECT DETAIL OVERLAY -->
+  <div id="proj-overlay" role="dialog" aria-modal="true">
+   <div class="max-w-3xl mx-auto px-6 py-20"><button id="proj-close" class="fixed top-6 right-6 z-10 glass rounded-full w-11 h-11 flex items-center justify-center hover:border-white/40" aria-label="Close project"><i data-lucide="x"></i></button> <!-- Detail 1 -->
+    <article class="proj-detail" data-detail="1"><img data-template-id="projdetail-1-img" class="canva-image w-full h-72 object-cover rounded-3xl" loading="lazy">
+     <h2 data-template-id="projdetail-1-name" class="canva-text font-bold mt-8 tracking-tight" style="font-size:2.4rem;"></h2>
+     <p data-template-id="projdetail-1-desc" class="canva-text opacity-70 mt-4 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-1-stack-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-1-stack" class="canva-text opacity-70 mt-2"></p>
+     <h3 data-template-id="projdetail-1-problem-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-1-problem" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-1-roadmap-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-1-roadmap" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <div class="flex gap-3 mt-10"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-1-github" class="canva-button px-6 py-3 rounded-full border border-white/15 hover:border-white/40 transition text-sm"></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-1-demo" class="canva-button glow-btn px-6 py-3 rounded-full text-sm"></a>
+     </div>
+    </article><!-- Detail 2 -->
+    <article class="proj-detail" data-detail="2"><img data-template-id="projdetail-2-img" class="canva-image w-full h-72 object-cover rounded-3xl" loading="lazy">
+     <h2 data-template-id="projdetail-2-name" class="canva-text font-bold mt-8 tracking-tight" style="font-size:2.4rem;"></h2>
+     <p data-template-id="projdetail-2-desc" class="canva-text opacity-70 mt-4 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-2-stack-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-2-stack" class="canva-text opacity-70 mt-2"></p>
+     <h3 data-template-id="projdetail-2-problem-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-2-problem" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-2-roadmap-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-2-roadmap" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <div class="flex gap-3 mt-10"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-2-github" class="canva-button px-6 py-3 rounded-full border border-white/15 hover:border-white/40 transition text-sm"></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-2-demo" class="canva-button glow-btn px-6 py-3 rounded-full text-sm"></a>
+     </div>
+    </article><!-- Detail 3 -->
+    <article class="proj-detail" data-detail="3"><img data-template-id="projdetail-3-img" class="canva-image w-full h-72 object-cover rounded-3xl" loading="lazy">
+     <h2 data-template-id="projdetail-3-name" class="canva-text font-bold mt-8 tracking-tight" style="font-size:2.4rem;"></h2>
+     <p data-template-id="projdetail-3-desc" class="canva-text opacity-70 mt-4 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-3-stack-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-3-stack" class="canva-text opacity-70 mt-2"></p>
+     <h3 data-template-id="projdetail-3-problem-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-3-problem" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-3-roadmap-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-3-roadmap" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <div class="flex gap-3 mt-10"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-3-github" class="canva-button px-6 py-3 rounded-full border border-white/15 hover:border-white/40 transition text-sm"></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-3-demo" class="canva-button glow-btn px-6 py-3 rounded-full text-sm"></a>
+     </div>
+    </article><!-- Detail 4 -->
+    <article class="proj-detail" data-detail="4"><img data-template-id="projdetail-4-img" class="canva-image w-full h-72 object-cover rounded-3xl" loading="lazy">
+     <h2 data-template-id="projdetail-4-name" class="canva-text font-bold mt-8 tracking-tight" style="font-size:2.4rem;"></h2>
+     <p data-template-id="projdetail-4-desc" class="canva-text opacity-70 mt-4 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-4-stack-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-4-stack" class="canva-text opacity-70 mt-2"></p>
+     <h3 data-template-id="projdetail-4-problem-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-4-problem" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-4-roadmap-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-4-roadmap" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <div class="flex gap-3 mt-10"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-4-github" class="canva-button px-6 py-3 rounded-full border border-white/15 hover:border-white/40 transition text-sm"></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-4-demo" class="canva-button glow-btn px-6 py-3 rounded-full text-sm"></a>
+     </div>
+    </article><!-- Detail 5 -->
+    <article class="proj-detail" data-detail="5"><img data-template-id="projdetail-5-img" class="canva-image w-full h-72 object-cover rounded-3xl" loading="lazy">
+     <h2 data-template-id="projdetail-5-name" class="canva-text font-bold mt-8 tracking-tight" style="font-size:2.4rem;"></h2>
+     <p data-template-id="projdetail-5-desc" class="canva-text opacity-70 mt-4 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-5-stack-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-5-stack" class="canva-text opacity-70 mt-2"></p>
+     <h3 data-template-id="projdetail-5-problem-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-5-problem" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <h3 data-template-id="projdetail-5-roadmap-h" class="canva-text font-semibold mt-8 text-xs uppercase tracking-widest opacity-50"></h3>
+     <p data-template-id="projdetail-5-roadmap" class="canva-text opacity-70 mt-2 leading-relaxed"></p>
+     <div class="flex gap-3 mt-10"><a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-5-github" class="canva-button px-6 py-3 rounded-full border border-white/15 hover:border-white/40 transition text-sm"></a> <a href="#" target="_blank" rel="noopener noreferrer" data-template-id="projdetail-5-demo" class="canva-button glow-btn px-6 py-3 rounded-full text-sm"></a>
+     </div>
+    </article>
+   </div>
+  </div>
+  <script src="/_sdk/e063511df281944a.editing_sdk.js" integrity="sha512-Xa8p4aPfoMxVnzxQE2WAG0FfoaPLxdjOJMfUZGm1yZosJTYmnNDvgLkJ2EoN0i3zxjeQVAzUMSXNvTKQVqbXyQ=="></script>
+  <script>
+    // Loader fade out
+    window.addEventListener('load', () => {
+      setTimeout(() => document.getElementById('loader').classList.add('hide'), 550);
+    });
+
+    lucide.createIcons();
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('opacity-100');
+      mobileMenu.classList.toggle('visible', open);
+      mobileMenu.classList.toggle('invisible', !open);
+      mobileMenu.classList.toggle('opacity-0', !open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100','visible');
+      mobileMenu.classList.add('opacity-0','invisible');
+    }));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Project overlay
+    const overlay = document.getElementById('proj-overlay');
+    const details = document.querySelectorAll('.proj-detail');
+    function openProject(id) {
+      details.forEach(d => d.classList.toggle('active', d.dataset.detail === id));
+      overlay.classList.add('open');
+      overlay.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeProject() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-open]').forEach(btn => btn.addEventListener('click', () => openProject(btn.dataset.open)));
+    document.getElementById('proj-close').addEventListener('click', closeProject);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeProject(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProject(); });
+
+    // Contact form (no persistence — inline confirmation only)
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('[data-template-id="contact-submit"]');
+      btn.style.opacity = '0.6';
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        document.getElementById('cf-success').classList.remove('hidden');
+        form.querySelector('#cf-name').value = '';
+        form.querySelector('#cf-email').value = '';
+        form.querySelector('#cf-msg').value = '';
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+      }, 500);
+    });
+
+    // Hero neural-network canvas
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [], w, h;
+    function resize() {
+      w = canvas.width = canvas.offsetWidth * devicePixelRatio;
+      h = canvas.height = canvas.offsetHeight * devicePixelRatio;
+    }
+    function initParticles() {
+      const count = Math.min(90, Math.floor((w * h) / 22000 / devicePixelRatio));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.25 * devicePixelRatio,
+        vy: (Math.random() - 0.5) * 0.25 * devicePixelRatio,
+        r: (Math.random() * 1.4 + 0.4) * devicePixelRatio
+      }));
+    }
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.55)';
+        ctx.fill();
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j];
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const max = 140 * devicePixelRatio;
+          if (dist < max) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = 'rgba(255,255,255,' + (0.12 * (1 - dist / max)) + ')';
+            ctx.lineWidth = 0.6 * devicePixelRatio;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
+    function setup() { resize(); initParticles(); }
+    window.addEventListener('resize', setup);
+    setup();
+    draw();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1798b9bc13530b4',t:'MTc4MzQ1NTU3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
